@@ -17,18 +17,23 @@ class CommonModuleDatabaseSeeder extends Seeder
     public function run()
     {
         Language::create([
+            'lang' => 'de',
+            'display_lang' => 'German',
+            'active' => 1
+        ]);
+        Language::create([
             'lang' => 'en',
             'display_lang' => 'English',
-            'active' => 1
+            'active' => 0
         ]);
 
         Language::create([
             'lang' => 'ar',
             'display_lang' => 'Arabic',
-            'active' => 1
+            'active' => 0
         ]);
 
-      
+
 
         // Create default apps
         Apps::create([
