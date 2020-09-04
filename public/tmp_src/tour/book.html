@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tour</title>
+
+  <link rel="stylesheet" href="assets/styles/css/slick.css">
+  <link rel="stylesheet" href="assets/styles/css/slick-theme.css">
+  <link rel="stylesheet" href="assets/styles/css/jquery.datepicker2.css">
+  <link rel="stylesheet" href="assets/styles/css/animate.css">
+
+  <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+<!-- <div class='loading'>
+    <div class='lds-dual-ring'></div>
+</div> -->
+<header id="header-2">
+        <div class="wand-container">
+            <div class="header-content2">
+                <div class="header-content2__logo">
+                    <a class="header-content2__logo__sitename" href="index.html"><img src="assets/images/logo.png"
+                            alt="logo"></a>
+                </div>
+
+                <nav class="header-2-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tour-grid.html">Tours</a></li>
+                        <li><a href="destination-grid.html">Destination</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li class="plan-trip"><a href="book.html" class="btn-book">Plan your trip<span class="fa fa-send"></span></a></li>
+                    </ul>
+                </nav>
+
+                <a href="#" class="header-content2__call">
+                    <img src="assets/images/call.png" alt="call">
+                    <div class="header-content2__call__phone-number">
+                        <p>Call Us Today!</p>
+                        <span>+053 569 7810</span>
+                    </div>
+                </a>
+                <div class="search-area">
+                    <div class="search-area__close"></div>
+                    <form action="#">
+                        <input class="search-area__input" placeholder="Search..." type="text">
+                        <button class="search-area__submit" type="submit"><span>Hit Enter to search or Esc key to
+                                close</span></button>
+                    </form>
+                </div>
+                <nav class="header-nav-mobile">
+                        <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="tour-grid.html">Tours</a></li>
+                                <li><a href="destination-grid.html">Destination</a></li>
+                                <li><a href="aboutus.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li class="plan-trip"><a href="book.html" class="btn-book">Plan your trip<span class="fa fa-send"></span></a></li>
+                            </ul>
+                </nav>
+
+                <div class="header-content2__hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+</header>
+
+
+<section>
+        <div class="slider-banner-2">
+            <div class="slider-banner-2__item">
+                <div class="wand-container">
+                    <div class="slider-banner-2__item__text animated zoomInUp">     
+                        <span>Discover the magic of</span><span class="slider-banner-2__item__text__line"></span>
+                        <h1>Mount Kilija</h1>
+                        <a href="#">VIEW TOUR  <img src="assets/images/slider/viewArrow.png" alt="viewtourArrow"> </a>       
+                    </div>
+                </div>    
+    
+            </div>
+    
+        </div>
+    
+</section>
+
+<section class="container clearfix common-pad-inner booknow">
+    <div class="sec-header">
+      <h2>Booking</h2>
+      <h3>Lorem ipsum dolor sit amet, ligula vestibulum nunc</h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 pull-left">
+        <div class="book-left-content input_form">
+          <form id="contactBooking" action="contact_process.php" method="post">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
+                    <label>Arival Date</label>
+                    <div class="right-sidebar__item__form--date">
+                            <span class="far fa-calendar-alt"></span>
+                            <input value="31 / 4 / 2017" type="text" data-select="datepicker" autocomplete="off">
+                        </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
+                    <label>Departure Date</label>
+                    <div class="right-sidebar__item__form--date">
+                            <span class="far fa-calendar-alt"></span>
+                            <input value="31 / 4 / 2017" type="text" data-select="datepicker" autocomplete="off">
+                        </div>
+              </div>
+            </div>
+            <div class="row mb-0">
+                <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
+                        <label>Arival place</label>
+                        <input id="Ar-place" type="text" name="Ar-place" placeholder="" class="form-control">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
+                        <label>Departure place</label>
+                        <input id="De-place" type="text" name="De-place" placeholder="" class="form-control">
+                </div>
+            </div>
+        
+      
+         
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-4 pull-right">
+            <div class="right-sidebar__item__contact">
+                    <h5>Get a Question?</h5>
+                    <p>Do not hesitate to give us a call. We are an expert team and we happy to talk to you.</p> 
+                    <a href="#"><img src="assets/images/sidebar/phone.png" alt="phone"><span class="contact-phone">+053 569 7810</span></a>
+                    <a href="#"><img src="assets/images/sidebar/mail.png" alt="mail"><span>wunderlust@support.com</span></a>
+                </div>
+      </div>
+    </div>
+  </section>
+
+<section class="places">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 border-right">
+                <div class="single-place">
+                    <h4>Cairo</h4>
+                    <div class="add-list-media-header">
+                            <label class="checkbox inline"> 
+                            <input type="checkbox" name="gender">
+                            <span>Pyramids</span> 
+                            </label>
+                            <span><p class="price">$45</p></span>
+                    </div>
+                    <div class="add-list-media-header">
+                            <label class="checkbox inline"> 
+                            <input type="checkbox" name="gender">
+                            <span>Pyramids</span> 
+                            </label>
+                            <span><p class="price">$45</p></span>
+                    </div>
+                    <div class="add-list-media-header">
+                            <label class="checkbox inline"> 
+                            <input type="checkbox" name="gender">
+                            <span>Pyramids</span> 
+                            </label>
+                            <span><p class="price">$45</p></span>
+                    </div>
+                    <div class="add-list-media-header">
+                            <label class="checkbox inline"> 
+                            <input type="checkbox" name="gender">
+                            <span>Pyramids</span> 
+                            </label>
+                            <span><p class="price">$45</p></span>
+                    </div>
+                    <div class="add-list-media-header">
+                            <label class="checkbox inline"> 
+                            <input type="checkbox" name="gender">
+                            <span>Pyramids</span> 
+                            </label>
+                            <span><p class="price">$45</p></span>
+                    </div>
+                    <div class="add-list-media-header">
+                            <label class="checkbox inline"> 
+                            <input type="checkbox" name="gender">
+                            <span>Pyramids</span> 
+                            </label>
+                            <span><p class="price">$45</p></span>
+                    </div>
+                    <div class="add-list-media-header">
+                            <label class="inline"> 
+                            <span><strong>Total</strong></span> 
+                            </label>
+                            <span><p class="price total">$45</p></span>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                    <div class="single-place">
+                        <h4>Aswan</h4>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="inline"> 
+                                <span><strong>Total</strong></span> 
+                                </label>
+                                <span><p class="price total">$45</p></span>
+                        </div>
+    
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 border-right">
+                    <div class="single-place">
+                        <h4>Cairo</h4>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="checkbox inline"> 
+                                <input type="checkbox" name="gender">
+                                <span>Pyramids</span> 
+                                </label>
+                                <span><p class="price">$45</p></span>
+                        </div>
+                        <div class="add-list-media-header">
+                                <label class="inline"> 
+                                <span><strong>Total</strong></span> 
+                                </label>
+                                <span><p class="price total">$45</p></span>
+                        </div>
+    
+                    </div>
+                    
+                </div>
+                <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                        <div class="single-place">
+                            <h4>Aswan</h4>
+                            <div class="add-list-media-header">
+                                    <label class="checkbox inline"> 
+                                    <input type="checkbox" name="gender">
+                                    <span>Pyramids</span> 
+                                    </label>
+                                    <span><p class="price">$45</p></span>
+                            </div>
+                            <div class="add-list-media-header">
+                                    <label class="checkbox inline"> 
+                                    <input type="checkbox" name="gender">
+                                    <span>Pyramids</span> 
+                                    </label>
+                                    <span><p class="price">$45</p></span>
+                            </div>
+                            <div class="add-list-media-header">
+                                    <label class="checkbox inline"> 
+                                    <input type="checkbox" name="gender">
+                                    <span>Pyramids</span> 
+                                    </label>
+                                    <span><p class="price">$45</p></span>
+                            </div>
+                            <div class="add-list-media-header">
+                                    <label class="checkbox inline"> 
+                                    <input type="checkbox" name="gender">
+                                    <span>Pyramids</span> 
+                                    </label>
+                                    <span><p class="price">$45</p></span>
+                            </div>
+                            <div class="add-list-media-header">
+                                    <label class="checkbox inline"> 
+                                    <input type="checkbox" name="gender">
+                                    <span>Pyramids</span> 
+                                    </label>
+                                    <span><p class="price">$45</p></span>
+                            </div>
+                            <div class="add-list-media-header">
+                                    <label class="checkbox inline"> 
+                                    <input type="checkbox" name="gender">
+                                    <span>Pyramids</span> 
+                                    </label>
+                                    <span><p class="price">$45</p></span>
+                            </div>
+                            <div class="add-list-media-header">
+                                    <label class="inline"> 
+                                    <span><strong>Total</strong></span> 
+                                    </label>
+                                    <span><p class="price total">$45</p></span>
+                            </div>
+        
+                        </div>
+                        
+                </div>
+            </div>
+    </div>
+
+</section>
+
+<footer id="footer-1">
+        <div class="scroll-top">
+        <i class="fas fa-angle-up"></i>
+    </div>
+        <div class="container">
+       
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="footer-widget-1 footer-widget-1--margin ">
+                        <a href="index.html"><img src="assets/images/footerlogo.png" alt="footerlogo"></a>
+                        <div class="footer-widget-1__text">
+                            <p>
+                                Sed vel molestie libero, ac vestibulum nunc. Vivamus quis nibh Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, neque? <br>
+                                Molestie mauris, vitae dictum erat quam vel felis. Vestibulum ante ispum      
+                            </p>
+                        </div>   
+                    </div>
+    
+                </div>
+                <div id="remove-padding" class="col-lg-8 col-md-8">
+                    <div class="footer-widget-1">
+                        
+                        <div class="footer-widget-1__lists">
+                                <div class="footer-widget-1__list address-box">
+                                        <div class="footer-widget-1__tittle">
+                                            <h5>Contact info</h5>
+                                            <div class="footer-widget-1__tittle__line-under"></div>                   
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <i class="fa fa-phone"></i>
+                                                <p>
+                                                    Call Us +56 (0) 012 345 6789
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-envelope-o"></i>
+                                                <p>
+                                                    <a href="mailto:info@example.com">business@support.com</a>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-map-marker"></i>
+                                                <p>
+                                                    123 Main Street, St. NW Ste, 1 Washington, DC,USA.
+                                                </p>
+                                            </li>
+                                        
+                                        </ul>
+                                    </div>
+                            <div class="footer-widget-1__list">
+                                <div class="footer-widget-1__tittle">
+                                    <h5>Solutions</h5>
+                                    <div class="footer-widget-1__tittle__line-under"></div>                   
+                                </div>
+                                <ul>
+                                    <li><a href="#">Tours</a></li>
+                                    <li><a href="#">Destinations</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="footer-widget-1__list">
+                                <div class="footer-widget-1__tittle">
+                                    <h5>quick links</h5>
+                                    <div class="footer-widget-1__tittle__line-under"></div>                   
+                                </div>
+                                <ul>
+                                    <li><a href="#">Discover</a></li>
+                                    <li><a href="#">Upcoming Tours</a></li>
+                                    <li><a href="#">Payment Options</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                                </div>
+    
+                        
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="copyright__area">
+                    <div class="copyright__license">
+                        Copyright <i class="far fa-copyright"></i> 2019 Wunderlust. All Rights Reserved.
+                    </div>
+                    <div class="copyright__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </footer>
+
+<script src="assets/scripts/jquery-3.4.1.js"> </script>
+
+<script src="assets/scripts/slick.min.js"></script>
+<script src="assets/scripts/jquery.datepicker2.js"></script>
+<script src="assets/scripts/isotope.pkgd.min.js"></script>
+
+
+<script src="assets/scripts/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+.trip-search{
+	margin-left: 100px;
+}
+
+.gender_list , .list{
+	width: 100%;
+}
+
+.t-content{
+	height: 300px;
+}
+
+.key_of_trip{
+	width: 170px;
+}
+
+.trip-head > img{
+	height: 270px;
+}
+
+.single-slider{
+	height: 480px;
+}
+
+.price-tbl{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.price-tbl td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+.price-tbl tr:nth-child(even){background-color: #f2f2f2;}
+
+.price-tbl tr:hover {background-color: #ddd;}
+
+.price-tbl th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+}
