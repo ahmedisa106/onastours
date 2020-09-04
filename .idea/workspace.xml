@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98177467-d241-4300-a89b-69ce1f4e1c28" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/FrontModule/Resources/views/pages/tour_item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/FrontModule/Resources/views/pages/tour_item.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/KAFrISJvQ6ERBHFjwpVB9S9GpFZeZeZwuI6dEvK9" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/KAFrISJvQ6ERBHFjwpVB9S9GpFZeZeZwuI6dEvK9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/2f1416cff7a4006ccef13d40c30fb695016080ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/2f1416cff7a4006ccef13d40c30fb695016080ad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/FrontModule/Resources/views/includes/js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/FrontModule/Resources/views/includes/js.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-09-04.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-09-04.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +176,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598025355924</updated>
       <workItem from="1598025361391" duration="184000" />
-      <workItem from="1599182212831" duration="2151000" />
+      <workItem from="1599182212831" duration="2303000" />
     </task>
     <servers />
   </component>
