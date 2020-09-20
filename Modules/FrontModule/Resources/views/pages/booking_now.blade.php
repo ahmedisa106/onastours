@@ -14,9 +14,7 @@
                     <div class="slider-banner-2__item__text animated zoomInUp">
                         <span>Discover the magic of</span><span class="slider-banner-2__item__text__line"></span>
                         <h1>Mount Kilija</h1>
-                        <a href="#">VIEW TOUR <img
-                                src="{{url('/')}}/public/assets/front/assets/images/slider/viewArrow.png"
-                                alt="viewtourArrow"> </a>
+                        <a href="#">VIEW TOUR <img src="{{url('/')}}/public/assets/front/assets/images/slider/viewArrow.png" alt="viewtourArrow"> </a>
                     </div>
                 </div>
 
@@ -53,7 +51,6 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
                                 <label>Name</label>
                                 <div>
-
                                     <input type="text" name="name" autocomplete="off">
                                 </div>
                             </div>
@@ -63,7 +60,7 @@
                                 <label>Ankuftsdatum</label>
                                 <div class="right-sidebar__item__form--date">
                                     <span class="far fa-calendar-alt"></span>
-                                    <input  name="arrival_date" type="text" data-select="datepicker"
+                                    <input name="arrival_date" type="text" data-select="datepicker"
                                            autocomplete="off">
                                 </div>
                             </div>
@@ -71,14 +68,12 @@
                                 <label>Abreisedatum</label>
                                 <div class="right-sidebar__item__form--date">
                                     <span class="far fa-calendar-alt"></span>
-                                    <input  name="departure_date" type="text" data-select="datepicker"
+                                    <input name="departure_date" type="text" data-select="datepicker"
                                            autocomplete="off">
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-0">
-
-
                             <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
 
                                 <div class="row">
@@ -88,16 +83,10 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <label for="">Kinder</label>
-                                        <input type="text"  name="kids_number" class="form-control">
+                                        <input type="text" name="kids_number" class="form-control">
                                     </div>
 
                                 </div>
-
-
-
-
-
-
 
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
@@ -105,8 +94,6 @@
                                 <input id="De-place" type="email" name="email" placeholder="" class="form-control">
                             </div>
                         </div>
-
-
 
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 m0 col-xs-12">
@@ -129,18 +116,16 @@
                             <label>Ihre Nachicht</label>
                             <div>
 
-                                <textarea class="form-control"  name="note" autocomplete="off"></textarea>
+                                <textarea class="form-control" name="note" autocomplete="off"></textarea>
                             </div>
                         </div>
                         <br>
-
-
 
                         <div class="col-lg-5">
 
                             <label for="" style="background-color: #70CBF4; font-size: 25px; text-align: center; color: white">{{$index = getName('4')}}</label>
 
-                            <input type="text" name="captcha" placeholder="Bitt den Code eingeben"  class="form-control">
+                            <input type="text" name="captcha" placeholder="Bitt den Code eingeben" class="form-control">
                             <input type="hidden" name="valid_captcha" value="{{$index}}">
 
                         </div>
@@ -149,10 +134,6 @@
 
                         <input type="submit" class="form-control col-lg-6 col-md-6" style="background-color: #70CBF4 ; color: white ;font-size: 25px;" value="Anfrag schicken">
 
-
-
-
-
                     </form>
                 </div>
             </div>
@@ -160,10 +141,8 @@
                 <div class="right-sidebar__item__contact">
                     <h5>Get a Question?</h5>
                     <p>Do not hesitate to give us a call. We are an expert team and we happy to talk to you.</p>
-                    <a href="#"><img src="{{url('/')}}/public/assets/front/assets/images/sidebar/phone.png" alt="phone"><span
-                            class="contact-phone">{{$config['phone']}} </span></a>
-                    <a href="#"><img src="{{url('/')}}/public/assets/front/assets/images/sidebar/mail.png"
-                                     alt="mail"><span>{{$config['email']}} </span></a>
+                    <a href="#"><img src="{{url('/')}}/public/assets/front/assets/images/sidebar/phone.png" alt="phone"><span class="contact-phone">{{$config['phone']}} </span></a>
+                    <a href="#"><img src="{{url('/')}}/public/assets/front/assets/images/sidebar/mail.png" alt="mail"><span>{{$config['email']}} </span></a>
                 </div>
             </div>
         </div>

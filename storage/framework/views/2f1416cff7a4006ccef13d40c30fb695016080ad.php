@@ -9,19 +9,19 @@
     <style>
 
 
-        th,td{
-            border: 1px solid  #3fced3;
+        th, td {
+            border: 1px solid #3fced3;
             font-weight: bolder;
         }
 
         table {
             text-align: center;
         }
-        tr:first-child{
+
+        tr:first-child {
 
             background-color: #3fced3;
         }
-
 
 
     </style>
@@ -108,12 +108,23 @@
 
                                 </ul>
                             </div>
+                            <div class="tour-infomation__content__schedule">
+                                <h2>Programs</h2>
+                                <?php $__currentLoopData = $tour->program; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index=> $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="tour-infomation__content__schedule__day">
+                                        <span>Day <?php echo e($index+1); ?>: <?php echo e($item->title); ?></span><span
+                                            class="fa fa-angle-down"></span>
+                                        <p><?php echo $item->description; ?></p>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
+                            </div>
 
 
                             <div class="tour-infomation__content__descript">
                                 <h2>Price Table</h2>
                                 <p>
+
                                     <?php echo $tour->price_table; ?>
 
                                 </p>
@@ -121,20 +132,9 @@
                             </div>
 
 
-                            <div class="tour-infomation__content__schedule">
-                                <h2>Programs</h2>
-                                <?php $__currentLoopData = $tour->program; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index=> $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <div class="tour-infomation__content__schedule__day">
-                                        <span>Day <?php echo e($index+1); ?>: <?php echo e($item->title); ?></span><span
-                                                class="fa fa-angle-down"></span>
-                                        <p><?php echo $item->description; ?></p>
-                                    </div>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-                            </div>
-
-                            <div  style=" margin-top: 30px; text-align: center ;background-color: #3fced3 ;height: 40px; color: white; line-height: 40px; ">
-                                <a  href="<?php echo e(route('front.bookingNow',$tour->id)); ?>" class="button btn full-width btn-large btn-primary "> <span style=" color: white; font-size: 20px; letter-spacing: 2px;">Anfrage schicken</span> </a>
+                            <div style=" margin-top: 30px; text-align: center ;background-color: #3fced3 ;height: 40px; color: white; line-height: 40px; ">
+                                <a href="<?php echo e(route('front.bookingNow',$tour->id)); ?>" class="button btn full-width btn-large btn-primary "> <span
+                                        style=" color: white; font-size: 20px; letter-spacing: 2px;">Anfrage schicken</span> </a>
                             </div>
 
 
@@ -153,12 +153,8 @@
                                     <h5>Get a Question?</h5>
                                     <p>Do not hesitate to give us a call. We are an expert team and we happy to talk to
                                         you.</p>
-                                    <a href="#"><img
-                                                src="<?php echo e(url('/')); ?>/public/assets/front/assets/images/sidebar/phone.png"
-                                                alt="phone"><span class="contact-phone"><?php echo e($config['phone']); ?></span></a>
-                                    <a href="#"><img
-                                                src="<?php echo e(url('/')); ?>/public/assets/front/assets/images/sidebar/mail.png"
-                                                alt="mail"><span><?php echo e($config['email']); ?> </span></a>
+                                    <a href="#"><img src="<?php echo e(url('/')); ?>/public/assets/front/assets/images/sidebar/phone.png" alt="phone"><span class="contact-phone"><?php echo e($config['phone']); ?></span></a>
+                                    <a href="#"><img src="<?php echo e(url('/')); ?>/public/assets/front/assets/images/sidebar/mail.png" alt="mail"><span><?php echo e($config['email']); ?> </span></a>
                                 </div>
                             </div>
                         </div>
@@ -195,8 +191,8 @@
                                         <div class="trending-tour-item__group-infor--left">
                                             <span class="trending-tour-item__group-infor__rating"></span>
                                             <div class="trending-tour-item__group-infor__lasting"><img
-                                                        src="<?php echo e(url('/')); ?>/public/assets/front/assets/images/tours/lasting.png"
-                                                        alt="lasting"> <?php echo e($trip->days); ?> Days / <?php echo e($trip->days-1); ?> Nights
+                                                    src="<?php echo e(url('/')); ?>/public/assets/front/assets/images/tours/lasting.png"
+                                                    alt="lasting"> <?php echo e($trip->days); ?> Days / <?php echo e($trip->days-1); ?> Nights
                                             </div>
                                         </div>
 

@@ -20,7 +20,35 @@
             <tr>
                 <td class='price-td' colspan='3'>
                     <p><strong>5* Standard</strong></p>
-                    <p><strong>Kairo</strong> : Mövenpick Pyramids, Sofitel Le Sphinx Cairo<br /><strong>Nilkreuzfahrt:</strong> MS Emilio, MS Royal Esadora, MS Princess Sarah<br /><strong>Das Rote Meer:</strong> Mercure Hurghada, Hilton Hurghada, Sunrise Holidays</p>
+                    <p><strong>Kairo</strong> : Mövenpick Pyramids, Sofitel Le Sphinx Cairo<br/><strong>Nilkreuzfahrt:</strong> MS Emilio, MS Royal Esadora, MS Princess Sarah<br/><strong>Das Rote Meer:</strong> Mercure Hurghada, Hilton Hurghada, Sunrise Holidays</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <table class='price-tbl'>
+            <tbody>
+            <tr class="pricing-tr">
+                <td class='price-td'>&nbsp;</td>
+                <td class='price-td'>Sommer (1.Mai bis 30.Sep)</td>
+                <td class='price-td'>Winter (1.Okt bis 30 Apr)</td>
+            </tr>
+            <tr>
+                <td class='price-td'>Einzelkabine</td>
+                <td>970 EUR</td>
+                <td>1050 EUR</td>
+            </tr>
+            <tr>
+                <td class='price-td'>Doppelkabine</td>
+                <td>970 EUR</td>
+                <td>850 EUR</td>
+            </tr>
+            <tr>
+                <td class='price-td' colspan='3'>
+                    <p><strong>5* Deluxe</strong></p>
+                    <p><strong>Kairo</strong> : Mövenpick Pyramids, Sofitel Le Sphinx Cairo<br/><strong>Nilkreuzfahrt:</strong> MS Emilio, MS Royal Esadora, MS Princess Sarah<br/><strong>Das Rote Meer:</strong> Mercure Hurghada, Hilton Hurghada, Sunrise Holidays</p>
                 </td>
             </tr>
             </tbody>

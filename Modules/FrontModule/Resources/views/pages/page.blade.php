@@ -26,10 +26,7 @@
                     <h3>{{ $page->title }}</h3>
                 </div>
             </div>
-            <p>Phasellus laoreet ullamcorper maximus. Curabitur quam sapien. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Reiciendis nostrum, velit id quo, excepturi minus perspiciatis, quisquam aspernatur
-                quibusdam officiis quia est rem amet molestias! Provident, vel nesciunt cupiditate, corrupti facilis
-                vero porro quam natus delectus pariatur est quaerat mollitia?</p>
+            <p>{!! $page->content !!}</p>
 
         </div>
     </section>

@@ -10,19 +10,19 @@
     <style>
 
 
-        th,td{
-            border: 1px solid  #3fced3;
+        th, td {
+            border: 1px solid #3fced3;
             font-weight: bolder;
         }
 
         table {
             text-align: center;
         }
-        tr:first-child{
+
+        tr:first-child {
 
             background-color: #3fced3;
         }
-
 
 
     </style>
@@ -106,32 +106,32 @@
                                     {!! $tour->not_include !!}
                                 </ul>
                             </div>
-
-
-
-                            <div class="tour-infomation__content__descript">
-                                <h2>Price Table</h2>
-                                <p>
-                                    {!! $tour->price_table !!}
-                                </p>
-
-                            </div>
-
-
                             <div class="tour-infomation__content__schedule">
                                 <h2>Programs</h2>
                                 @foreach($tour->program as $index=> $item)
                                     <div class="tour-infomation__content__schedule__day">
                                         <span>Day {{$index+1}}: {{$item->title}}</span><span
-                                                class="fa fa-angle-down"></span>
+                                            class="fa fa-angle-down"></span>
                                         <p>{!! $item->description !!}</p>
                                     </div>
                                 @endforeach
 
                             </div>
 
-                            <div  style=" margin-top: 30px; text-align: center ;background-color: #3fced3 ;height: 40px; color: white; line-height: 40px; ">
-                                <a  href="{{route('front.bookingNow',$tour->id)}}" class="button btn full-width btn-large btn-primary "> <span style=" color: white; font-size: 20px; letter-spacing: 2px;">Anfrage schicken</span> </a>
+
+                            <div class="tour-infomation__content__descript">
+                                <h2>Price Table</h2>
+                                <p>
+
+                                    {!! $tour->price_table !!}
+                                </p>
+
+                            </div>
+
+
+                            <div style=" margin-top: 30px; text-align: center ;background-color: #3fced3 ;height: 40px; color: white; line-height: 40px; ">
+                                <a href="{{route('front.bookingNow',$tour->id)}}" class="button btn full-width btn-large btn-primary "> <span
+                                        style=" color: white; font-size: 20px; letter-spacing: 2px;">Anfrage schicken</span> </a>
                             </div>
 
 
@@ -150,12 +150,8 @@
                                     <h5>Get a Question?</h5>
                                     <p>Do not hesitate to give us a call. We are an expert team and we happy to talk to
                                         you.</p>
-                                    <a href="#"><img
-                                                src="{{url('/')}}/public/assets/front/assets/images/sidebar/phone.png"
-                                                alt="phone"><span class="contact-phone">{{$config['phone'] }}</span></a>
-                                    <a href="#"><img
-                                                src="{{url('/')}}/public/assets/front/assets/images/sidebar/mail.png"
-                                                alt="mail"><span>{{  $config['email'] }} </span></a>
+                                    <a href="#"><img src="{{url('/')}}/public/assets/front/assets/images/sidebar/phone.png" alt="phone"><span class="contact-phone">{{$config['phone'] }}</span></a>
+                                    <a href="#"><img src="{{url('/')}}/public/assets/front/assets/images/sidebar/mail.png" alt="mail"><span>{{  $config['email'] }} </span></a>
                                 </div>
                             </div>
                         </div>
@@ -191,8 +187,8 @@
                                         <div class="trending-tour-item__group-infor--left">
                                             <span class="trending-tour-item__group-infor__rating"></span>
                                             <div class="trending-tour-item__group-infor__lasting"><img
-                                                        src="{{url('/')}}/public/assets/front/assets/images/tours/lasting.png"
-                                                        alt="lasting"> {{$trip->days}} Days / {{$trip->days-1}} Nights
+                                                    src="{{url('/')}}/public/assets/front/assets/images/tours/lasting.png"
+                                                    alt="lasting"> {{$trip->days}} Days / {{$trip->days-1}} Nights
                                             </div>
                                         </div>
 

@@ -3,7 +3,7 @@
     <meta name="title" content="{{$config['meta_title']}}">
     <meta name="description" content="{{$config['meta_desc']}}">
     <meta name="keywords" content="{{$config['meta_keywords']}}">
-    @stop
+@stop
 
 @section('content')
 
@@ -13,8 +13,8 @@
         <div class="gallery">
             @foreach($sliders as $item)
 
-                <img src="{{asset('public/images/sliders/' . $item->photo)}}" height='500px' alt="gall1">
-            @endforeach
+                <img src="{{asset('public/images/sliders/' . $item->photo)}}" height='750px' alt="gall1">
+        @endforeach
 
 
         <!-- dfdfdfdfd-->
@@ -153,8 +153,8 @@
                                     <div class="trending-tour-item__group-infor--left">
                                         <span class="trending-tour-item__group-infor__rating"></span>
                                         <div class="trending-tour-item__group-infor__lasting"><img
-                                                    src="{{url('/')}}/public/assets/front/assets/images/tours/lasting.png"
-                                                    alt="lasting">{{$trip->days}} Days / {{$trip->days-1}} Nights
+                                                src="{{url('/')}}/public/assets/front/assets/images/tours/lasting.png"
+                                                alt="lasting">{{$trip->days}} Days / {{$trip->days-1}} Nights
                                         </div>
                                     </div>
 

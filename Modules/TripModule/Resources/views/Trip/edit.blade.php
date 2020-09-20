@@ -70,9 +70,9 @@
                                             </div>
                                         </div>
 
-                                        <!-- <div class="form-group">
+                                    <!-- <div class="form-group">
                                             {{-- TourOption --}}
-                                            <label class="control-label col-sm-2" for="title"> {{__('tripmodule::trip.touroption')}}:</label>
+                                        <label class="control-label col-sm-2" for="title"> {{__('tripmodule::trip.touroption')}}:</label>
                                             <div class="col-sm-8">
                                         <textarea id="tour_option{{ $lang->id }}" name="{{ $lang->lang }}[tour_option]"
                                                   style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
@@ -81,11 +81,11 @@
                                             </div>
                                         </div> -->
 
-                                        <!-- <div class="form-group">
+                                    <!-- <div class="form-group">
                                             {{-- Tour Vehicles --}}
-                                            <label class="control-label col-sm-2" for="title"> Tour Vehicles :</label>
-                                            <div class="col-sm-8">
-                                        <textarea id="tour_vehicles{{ $lang->id }}"
+                                        <label class="control-label col-sm-2" for="title"> Tour Vehicles :</label>
+                                        <div class="col-sm-8">
+                                    <textarea id="tour_vehicles{{ $lang->id }}"
                                                   name="{{ $lang->lang }}[tour_vehicles]"
                                                   style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
                                             {{ ValueOf($trip, $lang, 'tour_vehicles') }}
@@ -141,13 +141,26 @@
                             <!-- /.tab-content -->
                         </div>
                         <!-- /.nav-tabs-custom -->
-                        <div class="form-group">
-                            {{-- Short Description --}}
-                            <label class="control-label col-sm-2"
-                                   for="title"> Price Table:</label>
-                            <div class="col-sm-8">
-                                <textarea id="price_table" name="price_table" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">@include('tripmodule::Trip.price_table')</textarea>
+                        <input checked class="price_table" style="margin-left:200px; margin-right: 10px; " type="radio" value="0" name="pt"><label class=" " for="">price table</label>
+                        <input class="price_table" style="margin-left:50px; margin-right: 10px; " type="radio" value="1" name="pt"> <label class=" " for="">price one table</label>
+
+                        <div class="form-group pt " id="0">
+
+                            <label for="" class="control-label col-sm-2 hidden">price table</label>
+
+                            <div class="col-sm-8" style=" margin-left: 200px;">
+                                <textarea class=" ckeditor" name="table1" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">@include('tripmodule::Trip.price_table')</textarea>
                             </div>
+
+                        </div>
+                        <div class="form-group hidden  pt" id="1">
+
+                            <label for="" class="control-label col-sm-2 hidden">price table</label>
+
+                            <div class="col-sm-8" style=" margin-left: 200px;">
+                                <textarea class=" ckeditor" name="table2" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">@include('tripmodule::Trip.table2')</textarea>
+                            </div>
+
                         </div>
 
                         {{-- Upload photo --}}
@@ -188,7 +201,7 @@
                                        required>
                             </div>
 
-                           
+
                             <label class="control-label col-sm-2" for="title">{{__('tripmodule::trip.days')}} :</label>
                             <div class="col-sm-3">
                                 <input id="days" type="text" value="{{ $trip->days }}" autocomplete="off" class="form-control" name="days"
@@ -282,7 +295,7 @@
                                                 <label class="control-label col-sm-2"
                                                        for="desc"> {{__('tripmodule::trip.md')}} :</label>
                                                 <div class="col-sm-8">
-                                            <textarea  id="meta_desc_{{$lang->lang}}" class="form-control" autocomplete="off"
+                                            <textarea id="meta_desc_{{$lang->lang}}" class="form-control" autocomplete="off"
                                                       name="{{ $lang->lang }}[meta_desc]" cols="15"
                                                       rows="2">{{ ValueOf($trip, $lang, 'meta_desc') }}</textarea>
                                                     <span id="descSpan_{{$lang->lang}}"></span>
@@ -294,7 +307,7 @@
                                                 <label class="control-label col-sm-2" for="tags"> Meta Keywords
                                                     / {{__('tripmodule::trip.tags')}} :</label>
                                                 <div class="col-sm-8">
-                                                    <input  id="countKeyWords{{$lang->lang}}" autocomplete="off"
+                                                    <input id="countKeyWords{{$lang->lang}}" autocomplete="off"
                                                            type="text" class="form-control"
                                                            name="{{ $lang->lang }}[meta_keywords]"
                                                            value="{{ ValueOf($trip, $lang, 'meta_keywords') }}">
@@ -366,7 +379,7 @@
     <script>
         $(function () {
             CKEDITOR.replace('desc' + "{{ $lang->id }}");
-            
+
             CKEDITOR.replace('include' + "{{ $lang->id }}");
             CKEDITOR.replace('not_include' + "{{ $lang->id }}");
             // CKEDITOR.replace('tour_vehicles' + '{{ $lang->id }}');
@@ -380,6 +393,24 @@
 
 <script>
     CKEDITOR.replace('price_table');
+</script>
+
+<script>
+    $('document').ready(function () {
+
+        $('.price_table').on('click', function () {
+            $value = $(this).val();
+
+            $('.pt').hide();
+
+            $('#' + $value).removeClass('hidden');
+            $('#' + $value).show();
+
+        })
+
+
+    });
+
 </script>
 
 @endsection

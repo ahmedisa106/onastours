@@ -10,6 +10,8 @@
 <script src="<?php echo e(adminurl('dist/js/adminlte.min.js')); ?>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo e(adminurl('dist/js/demo.js')); ?>"></script>
+
+<script src="<?php echo e(asset('assets/admin/plugins/ckeditor/ckeditor.js')); ?>"></script>
 <script>
     $(document).ready(function () {
         $('.sidebar-menu').tree()

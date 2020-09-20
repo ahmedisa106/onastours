@@ -3,12 +3,12 @@
 @section('header')
 
     @foreach($categoryTours->trips as $cat)
-    <meta name="title" content="{{$cat['meta_title']}}">
-    <meta name="description" content="{{$cat['meta_desc']}}">
-    <meta name="keywords" content="{{$cat['meta_keywords']}}">
+        <meta name="title" content="{{$cat['meta_title']}}">
+        <meta name="description" content="{{$cat['meta_desc']}}">
+        <meta name="keywords" content="{{$cat['meta_keywords']}}">
 
     @endforeach
-    @stop
+@stop
 @section('content')
 
     <section>
@@ -37,7 +37,7 @@
 
 
                     </div>
-                    <span class="col-4-tour__sub-tittle" >{!! $categoryTours->description !!}</span>
+                    <span class="col-4-tour__sub-tittle">{!! $categoryTours->description !!}</span>
 
 
                 </div>
@@ -48,8 +48,7 @@
                         <div class="col-lg-12 col-xl-4 col-sm-6 col-md-12">
                             <a href="{{route('front.tourItem',$trip->slug)}}" class="trending-tour-item">
 
-                                <img class="trending-tour-item__thumnail"
-                                     src="{{asset('public/images/trip/' . $trip->photo)}}" alt="{{$trip->title}}">
+                                <img class="trending-tour-item__thumnail" src="{{asset('public/images/trip/' . $trip->photo)}}" alt="{{$trip->title}}">
                                 <div class="trending-tour-item__info">
                                     <h3 class="trending-tour-item__name">
                                         {{$trip->title}}
@@ -60,9 +59,7 @@
                                             {{--<span class="trending-tour-item__group-infor__rating"></span>--}}
 
                                             <div class="trending-tour-item__group-infor__lasting">
-                                                <img src="{{url('/')}}/public/assets/front/assets/images/tours/lasting.png"
-                                                     alt="">
-                                                5 Days / 4 Nights
+                                                <img src="{{url('/')}}/public/assets/front/assets/images/tours/lasting.png" alt="">5 Days / 4 Nights
                                             </div>
 
 
