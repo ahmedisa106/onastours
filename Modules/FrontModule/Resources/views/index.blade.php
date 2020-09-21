@@ -11,10 +11,16 @@
     <section>
         <h2 class="galery-h2">galerry</h2>
         <div class="gallery">
-            @foreach($sliders as $item)
+            @if($sliders->count()>0)
+                @foreach($sliders as $item)
+                    <img src="{{asset('public/images/sliders/' . $item->photo)}}" height='750px' alt="gall1">
 
-                <img src="{{asset('public/images/sliders/' . $item->photo)}}" height='750px' alt="gall1">
-        @endforeach
+                @endforeach
+
+            @else
+                <img src="{{asset('public/default/sliders/default.jpg')}}" height='750px' alt="gall1">
+
+        @endif
 
 
         <!-- dfdfdfdfd-->
@@ -82,7 +88,13 @@
                             @if($index %2 !=0)
                                 <span class="destination-5__item__upper-tittle">{{$distination->title}}</span>
 
-                                <img src="{{asset('public/images/destination/' . $distination->photo)}}" alt="desti51">
+                                @if($distination->photo !=null)
+                                    <img src="{{asset('public/images/destination/' . $distination->photo)}}" alt="desti51">
+                                @else
+                                    <img src="{{asset('public/default/destination/default.jpg')}}" alt="desti51">
+
+
+                                @endif
                             @else
                                 <img src="{{asset('public/images/destination/' . $distination->photo)}}" alt="desti51">
                                 <span class="destination-5__item__below-tittle">{{$distination->title}}</span>
@@ -142,8 +154,14 @@
                     <div class="col-lg-3 col-md-6 col-xl-4 col-sm-6 col-12">
                         <a href="{{ url('tour') }}/{{ $trip->slug  }}" class="trending-tour-item">
 
-                            <img class="trending-tour-item__thumnail"
-                                 src="{{asset('public/images/trip/' . $trip->photo)}}">
+                            @if($trip->photo !=null)
+                                <img class="trending-tour-item__thumnail"
+                                     src="{{asset('public/images/trip/' . $trip->photo)}}">
+                            @else
+                                <img class="trending-tour-item__thumnail"
+                                     src="{{asset('public/default/trips/default.jpg')}}">
+                            @endif
+
 
                             <div class="trending-tour-item__info">
                                 <h3 class="trending-tour-item__name">

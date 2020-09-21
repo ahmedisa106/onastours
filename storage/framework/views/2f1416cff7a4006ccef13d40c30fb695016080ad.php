@@ -180,8 +180,15 @@
                         <div class="col-lg-4 col-md-6 col-xl-4 col-sm-6 col-12">
                             <a href="<?php echo e(route('front.tourItem',$trip->slug)); ?>" class="trending-tour-item">
 
-                                <img class="trending-tour-item__thumnail"
-                                     src="<?php echo e(asset('public/images/trip/' . $trip->photo)); ?>" alt="tour1">
+                                <?php if($trip->photo != null): ?>
+                                    <img class="trending-tour-item__thumnail"
+                                         src="<?php echo e(asset('public/images/trip/' . $trip->photo)); ?>" alt="tour1">
+                                <?php else: ?>
+                                    <img class="trending-tour-item__thumnail"
+                                         src="<?php echo e(asset('public/images/trip/default.jpg')); ?>" alt="tour1">
+
+                                <?php endif; ?>
+
                                 <div class="trending-tour-item__info">
                                     <h3 class="trending-tour-item__name">
                                         <?php echo e($trip->title); ?>

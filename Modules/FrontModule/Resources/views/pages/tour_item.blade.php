@@ -177,8 +177,15 @@
                         <div class="col-lg-4 col-md-6 col-xl-4 col-sm-6 col-12">
                             <a href="{{route('front.tourItem',$trip->slug)}}" class="trending-tour-item">
 
-                                <img class="trending-tour-item__thumnail"
-                                     src="{{asset('public/images/trip/' . $trip->photo)}}" alt="tour1">
+                                @if($trip->photo != null)
+                                    <img class="trending-tour-item__thumnail"
+                                         src="{{asset('public/images/trip/' . $trip->photo)}}" alt="tour1">
+                                @else
+                                    <img class="trending-tour-item__thumnail"
+                                         src="{{asset('public/images/trip/default.jpg')}}" alt="tour1">
+
+                                @endif
+
                                 <div class="trending-tour-item__info">
                                     <h3 class="trending-tour-item__name">
                                         {{$trip->title}}

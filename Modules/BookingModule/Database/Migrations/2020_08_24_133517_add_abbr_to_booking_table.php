@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class AddAbbrToBookingTable extends Migration
 {
@@ -13,10 +13,10 @@ class AddAbbrToBookingTable extends Migration
      */
     public function up()
     {
-        Schema::table('booking', function (Blueprint $table) {
-            $table->string('abbr')->nullable();
-
-        });
+//        Schema::table('booking', function (Blueprint $table) {
+//            $table->string('abbr')->nullable();
+//
+//        });
     }
 
     /**

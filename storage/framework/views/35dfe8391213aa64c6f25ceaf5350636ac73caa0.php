@@ -23,19 +23,73 @@
 
     <section class="grid-left-sidebar">
         <div class="container">
-            <div class="row">
-
+            <?php if($categoryTours->child->count()>0): ?>
                 <div class="col-4-tour__tittle" style="margin: 50px auto">
                     <!-- section tittle -->
 
                     <div class="section-tittle">
-                        <h2><?php echo e($categoryTours->title); ?></h2>
+                        <h2>child Category</h2>
                         <div class="section-tittle__line-under"></div>
                         <p><span><?php echo e($categoryTours->title); ?></span></p> <br>
 
 
                     </div>
-                    <span class="col-4-tour__sub-tittle"><?php echo $categoryTours->description; ?></span>
+                    <span class="col-4-tour__sub-tittle"><?php echo e(strip_tags($categoryTours->description)); ?></span>
+
+
+                </div>
+
+                <div class="row">
+
+                    <?php $__currentLoopData = $categoryTours->child; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="col-lg-12 col-xl-4 col-sm-6 col-md-12">
+                            <a href="<?php echo e(url('category')); ?>/<?php echo e($item->slug); ?>" class="trending-tour-item">
+
+                                <?php if($item->photo != null): ?>
+                                    <img class="trending-tour-item__thumnail" src="<?php echo e(asset('public/images/trip_category/' . $item->photo)); ?>" alt="<?php echo e($item->title); ?>">
+
+                                <?php else: ?>
+                                    <img class="trending-tour-item__thumnail" src="<?php echo e(asset('public/default/trips/default.jpg')); ?>" alt="<?php echo e($item->title); ?>">
+
+                                <?php endif; ?>
+
+                                <div class="trending-tour-item__info">
+                                    <h3 class="trending-tour-item__name">
+                                        <?php echo e($item->title); ?>
+
+                                    </h3>
+
+                                    <div class="trending-tour-item__group-infor">
+                                        <div class="trending-tour-item__group-infor--left">
+                                            
+
+
+                                        </div>
+
+
+                                        <p> <?php echo $item->description; ?></p>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+                </div>
+            <?php endif; ?>
+
+            <?php if($categoryTours->trips->count()>0): ?>
+                <div class="col-4-tour__tittle" style="margin: 50px auto">
+                    <!-- section tittle -->
+
+                    <div class="section-tittle">
+                        <h2>trips</h2>
+                        <div class="section-tittle__line-under"></div>
+                        <p><span>trips</span></p> <br>
+
+
+                    </div>
 
 
                 </div>
@@ -45,8 +99,15 @@
                     <?php $__currentLoopData = $categoryTours->trips; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $trip): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="col-lg-12 col-xl-4 col-sm-6 col-md-12">
                             <a href="<?php echo e(route('front.tourItem',$trip->slug)); ?>" class="trending-tour-item">
+                                <?php if($trip->photo != null): ?>
+                                    <img class="trending-tour-item__thumnail" src="<?php echo e(asset('public/images/trip/' . $trip->photo)); ?>" alt="<?php echo e($trip->title); ?>">
 
-                                <img class="trending-tour-item__thumnail" src="<?php echo e(asset('public/images/trip/' . $trip->photo)); ?>" alt="<?php echo e($trip->title); ?>">
+                                <?php else: ?>
+                                    <img class="trending-tour-item__thumnail" src="<?php echo e(asset('public/default/trips/default.jpg')); ?>" alt="<?php echo e($trip->title); ?>">
+
+                                <?php endif; ?>
+
+
                                 <div class="trending-tour-item__info">
                                     <h3 class="trending-tour-item__name">
                                         <?php echo e($trip->title); ?>
@@ -58,7 +119,7 @@
                                             
 
                                             <div class="trending-tour-item__group-infor__lasting">
-                                                <img src="<?php echo e(url('/')); ?>/public/assets/front/assets/images/tours/lasting.png" alt="">5 Days / 4 Nights
+                                                <img src="<?php echo e(url('/')); ?>/public/assets/front/assets/images/tours/lasting.png" alt=""> <?php echo e($trip->days); ?> Days / <?php echo e($trip->days-1); ?> Nights
                                             </div>
 
 
@@ -76,20 +137,11 @@
 
 
                 </div>
-
-
-                <!-- <div class="wander-pagination__pagination">
-                <div class="wander-pagination__pagination__paging current">1</div>
-                <div class="wander-pagination__pagination__paging">2</div>
-                <div class="wander-pagination__pagination__paging">3</div>
-                <div class="wander-pagination__pagination__paging"><i class="fa fa-angle-right"></i></div> -->
-            </div>
-
-        </div>
+            <?php endif; ?>
 
 
         </div>
-        </div>
+
     </section>
 
 

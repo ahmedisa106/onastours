@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['prefix' => 'admin-panel', 'middleware' => ['auth:admin']], function(){
+Route::group(['prefix' => 'admin-panel', 'middleware' => ['auth:admin']], function () {
 
     Route::get('/trip/category/ajax', 'TripCategoryController@dataTables');
 
@@ -32,6 +32,7 @@ Route::group(['prefix' => 'admin-panel', 'middleware' => ['auth:admin']], functi
 
         Route::get('/trip-program/{id}', 'TripProgramController@create');
         Route::post('/trip-program', 'TripProgramController@store');
+        Route::post('trip/homePage', 'TripController@ToggleHomePage')->name('trip.homepage');
 
     });
 
@@ -44,6 +45,7 @@ Route::group(['prefix' => 'admin-panel', 'middleware' => ['auth:admin']], functi
 
         Route::resource('/trip', 'TripController')->only(['edit', 'update']);
         Route::resource('/destination', 'DestinationController')->only(['edit', 'update']);
+
     });
 
     # For superadmin only.

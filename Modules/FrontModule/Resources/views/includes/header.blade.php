@@ -4,23 +4,23 @@
             <span class="header-4-upper__contact-area">
                 <a class="header-4-upper__contact" href="#">
                     <img src="{{ url('assets/front') }}/assets/images/mailcontact.png" alt="mailcontact">
-                    wunderlust@support.com
+                    {{$config['email']}}
                 </a>
                 <a class="header-4-upper__contact" href="#">
                     <img src="{{ url('assets/front') }}/assets/images/header4phone.png" alt="phone">
-                    +053 569 7810
+                    {{$config['phone']}}
                 </a>
             </span>
 
             {{--<span class="header-4-upper__translater">--}}
-               {{--<a href="http://tour.mallahsoft.com/en"><span class="flag-icon flag-icon-us"> </span>  English</a>--}}
-			   {{--<a href="http://tour.mallahsoft.com/de"><span class="flag-icon flag-icon-de"> </span>  German</a>--}}
+            {{--<a href="http://tour.mallahsoft.com/en"><span class="flag-icon flag-icon-us"> </span>  English</a>--}}
+            {{--<a href="http://tour.mallahsoft.com/de"><span class="flag-icon flag-icon-de"> </span>  German</a>--}}
             {{--</span>--}}
 
             <span class="header-4-upper__social">
-                <a href="#"><img src="{{ url('assets/front') }}/assets/images/header4upperIns.png" alt="header4ins"></a>
-                <a href="#"><img src="{{ url('assets/front') }}/assets/images/header4face.png" alt="face"></a>
-                <a href="#"><img src="{{ url('assets/front') }}/assets/images/header4twitter.png" alt="twitter"></a>
+                <a href="{{$config['instgram']}}"><img src="{{ url('assets/front') }}/assets/images/header4upperIns.png" alt="header4ins"></a>
+                <a href="{{$config['fb_link']}}"><img src="{{ url('assets/front') }}/assets/images/header4face.png" alt="face"></a>
+                <a href="{{$config['tw_link']}}"><img src="{{ url('assets/front') }}/assets/images/header4twitter.png" alt="twitter"></a>
             </span>
         </div>
     </div>

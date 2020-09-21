@@ -208,6 +208,13 @@
                                        required>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="is_home_page" class="control-label col-sm-2">{{__('tripmodule::trip.home_page')}}</label>
+                            <div class="col-md-3">
+                                <input type="checkbox" {{$trip->is_home_page ==1 ? 'checked' :''}} name="is_home_page">
+                            </div>
+
+                        </div>
 
 
                         {{-- Select Category --}}

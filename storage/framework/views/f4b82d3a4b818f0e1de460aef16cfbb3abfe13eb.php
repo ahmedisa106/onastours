@@ -10,10 +10,16 @@
     <section>
         <h2 class="galery-h2">galerry</h2>
         <div class="gallery">
-            <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php if($sliders->count()>0): ?>
+                <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <img src="<?php echo e(asset('public/images/sliders/' . $item->photo)); ?>" height='750px' alt="gall1">
 
-                <img src="<?php echo e(asset('public/images/sliders/' . $item->photo)); ?>" height='750px' alt="gall1">
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+            <?php else: ?>
+                <img src="<?php echo e(asset('public/default/sliders/default.jpg')); ?>" height='750px' alt="gall1">
+
+        <?php endif; ?>
 
 
         <!-- dfdfdfdfd-->
@@ -81,7 +87,13 @@
                             <?php if($index %2 !=0): ?>
                                 <span class="destination-5__item__upper-tittle"><?php echo e($distination->title); ?></span>
 
-                                <img src="<?php echo e(asset('public/images/destination/' . $distination->photo)); ?>" alt="desti51">
+                                <?php if($distination->photo !=null): ?>
+                                    <img src="<?php echo e(asset('public/images/destination/' . $distination->photo)); ?>" alt="desti51">
+                                <?php else: ?>
+                                    <img src="<?php echo e(asset('public/default/destination/default.jpg')); ?>" alt="desti51">
+
+
+                                <?php endif; ?>
                             <?php else: ?>
                                 <img src="<?php echo e(asset('public/images/destination/' . $distination->photo)); ?>" alt="desti51">
                                 <span class="destination-5__item__below-tittle"><?php echo e($distination->title); ?></span>
@@ -141,8 +153,14 @@
                     <div class="col-lg-3 col-md-6 col-xl-4 col-sm-6 col-12">
                         <a href="<?php echo e(url('tour')); ?>/<?php echo e($trip->slug); ?>" class="trending-tour-item">
 
-                            <img class="trending-tour-item__thumnail"
-                                 src="<?php echo e(asset('public/images/trip/' . $trip->photo)); ?>">
+                            <?php if($trip->photo !=null): ?>
+                                <img class="trending-tour-item__thumnail"
+                                     src="<?php echo e(asset('public/images/trip/' . $trip->photo)); ?>">
+                            <?php else: ?>
+                                <img class="trending-tour-item__thumnail"
+                                     src="<?php echo e(asset('public/default/trips/default.jpg')); ?>">
+                            <?php endif; ?>
+
 
                             <div class="trending-tour-item__info">
                                 <h3 class="trending-tour-item__name">

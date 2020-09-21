@@ -136,7 +136,7 @@
                         <!-- /.nav-tabs-custom -->
 
                         <input checked class="price_table" style="margin-left:200px; margin-right: 10px; " type="radio" value="0" name="pt"><label class=" " for="">price table</label>
-                        <input class="price_table" style="margin-left:50px; margin-right: 10px; " type="radio" value="1" name="pt"> <label class=" " for="">price table</label>
+                        <input class="price_table" style="margin-left:50px; margin-right: 10px; " type="radio" value="1" name="pt"> <label class=" " for="">price one table</label>
 
                         <div class="form-group pt " id="0">
 
@@ -184,6 +184,13 @@
                             <div class="col-sm-3">
                                 <input id="days" type="text" autocomplete="off" class="form-control" name="days"
                                        required>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="is_home_page" class="control-label col-sm-2"><?php echo e(__('tripmodule::trip.home_page')); ?></label>
+                            <div class="col-md-3">
+                                <input type="checkbox" name="is_home_page">
                             </div>
 
                         </div>

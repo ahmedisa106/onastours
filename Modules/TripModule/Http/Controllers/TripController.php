@@ -79,6 +79,11 @@ class TripController extends Controller
         } else {
             $tripData['price_table'] = $request->table2;
         }
+        if ($request->is_home_page) {
+            $tripData['is_home_page'] = 1;
+        } else {
+            $tripData['is_home_page'] = 0;
+        }
         $tripDestinations = $request->get('destinations');
         $tripCategoriesId = $request->get('trip_category_id');
 
@@ -136,12 +141,19 @@ class TripController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $tripPic = $this->tripRepo->find($id);
-        $tripData = $request->except('_token', '_method', 'photo', 'photos', 'de', 'en', 'destinations', 'categories');
+        $tripData = $request->except('_token', '_method', 'photo', 'photos', 'de', 'en', 'destinations', 'categories', 'home_page');
         if ($request->pt == 0) {
             $tripData['price_table'] = $request->table1;
         } else {
             $tripData['price_table'] = $request->table2;
+        }
+
+        if ($request->is_home_page) {
+            $tripData['is_home_page'] = 1;
+        } else {
+            $tripData['is_home_page'] = 0;
         }
 
         $activeLangCode = \LanguageHelper::getDynamicLangCode();
@@ -177,6 +189,8 @@ class TripController extends Controller
      */
     public function storeAlbum(Request $request)
     {
+
+
         $tripData = $request->except('_token', 'photos');
 
         # Loop through product_photos_many to save photos first.
@@ -251,6 +265,25 @@ class TripController extends Controller
                     return '<strong> No Photo </strong>';
                 }
             })
+            ->addColumn('home_page', function ($row) {
+                $trip_id = '<input type="hidden" value="' . $row->id . '" id="trip_id">';
+                if ($row->is_home_page == 1) {
+                    $active_num = 0;
+                    $btn_class = 'btn btn-success';
+                    $btn_font = 'fa fa-check';
+
+                } else {
+                    $active_num = 1;
+                    $btn_class = 'btn btn-danger';
+                    $btn_font = 'fa fa-close';
+                }
+
+                $active = '<input type="hidden" value="' . $active_num . '" id="active" name="active">';
+                $activeHome = '<button type="button" id="updateHome" class="' . $btn_class . '"><i id="icon" class="' . $btn_font . '"></i></button>';
+                return $trip_id . $active . $activeHome;
+
+
+            })
             ->addColumn('operations', function ($row) {
                 $delete_tag = '<a href="' . url('admin-panel/trip/delete', $row->id) . '" class="btn btn btn-danger" onclick="return confirm(\'Are you sure, You want to delete this Data?\')"><i class="glyphicon glyphicon-trash"></i></a>';
                 $edit_tag = '<a href="' . url("admin-panel/trip/" . $row->id . "/edit") . '" type="button" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></a>';
@@ -259,7 +292,7 @@ class TripController extends Controller
 
                 return $prog_tag . ' &nbsp; ' . $show_tag . ' &nbsp; ' . $edit_tag . ' &nbsp; ' . $delete_tag;
             })
-            ->rawColumns(['delete' => 'delete', 'operations' => 'operations', 'program' => 'program', 'photo' => 'photo'])
+            ->rawColumns(['delete' => 'delete', 'operations' => 'operations', 'program' => 'program', 'photo' => 'photo', 'home_page' => 'home_page'])
             ->make(true);
     }
 
@@ -274,5 +307,16 @@ class TripController extends Controller
     {
         $this->tripPicRepo->deletePic($id);
         return redirect()->back();
+    }
+
+    public function ToggleHomePage(Request $request)
+    {
+
+        if ($request->ajax()) {
+
+            $this->tripRepo->UpdateHomeTrips($request->id, $request->active);
+            return response()->json('updated', '200');
+        }
+
     }
 }
