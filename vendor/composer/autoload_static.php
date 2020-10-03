@@ -2914,6 +2914,7 @@ class ComposerStaticInit39eefd0be9172b2d11355e2407fd2637
         'Modules\\ConfigModule\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/ConfigModule/Providers/RouteServiceProvider.php',
         'Modules\\ConfigModule\\Repository\\ConfigRepository' => __DIR__ . '/../..' . '/Modules/ConfigModule/Repository/ConfigRepository.php',
         'Modules\\FrontModule\\Database\\Seeders\\FrontModuleDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/FrontModule/Database/Seeders/FrontModuleDatabaseSeeder.php',
+        'Modules\\FrontModule\\Emails\\sendEmail' => __DIR__ . '/../..' . '/Modules/FrontModule/Emails/SendEmail.php',
         'Modules\\FrontModule\\Http\\Controllers\\FrontModuleController' => __DIR__ . '/../..' . '/Modules/FrontModule/Http/Controllers/FrontModuleController.php',
         'Modules\\FrontModule\\Providers\\FrontModuleServiceProvider' => __DIR__ . '/../..' . '/Modules/FrontModule/Providers/FrontModuleServiceProvider.php',
         'Modules\\FrontModule\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/FrontModule/Providers/RouteServiceProvider.php',

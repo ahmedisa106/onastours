@@ -48,7 +48,7 @@
                         </div>
                         <div class="footer-widget-1__list">
                             <div class="footer-widget-1__tittle">
-                                <h5>Solutions</h5>
+                                <h5>Generell</h5>
                                 <div class="footer-widget-1__tittle__line-under"></div>
                             </div>
                             <ul>

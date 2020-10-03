@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/sendcontactemail",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\SendContactEmail\\Providers\\SendContactEmailServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\SendContactEmail\\": ""
+        }
+    }
+}

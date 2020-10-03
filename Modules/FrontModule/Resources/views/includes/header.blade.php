@@ -46,7 +46,7 @@
                 </span>
                 <ul>
                     <li>
-                        <a href="">HOME </a>
+                        <a href="{{url('/')}}">HOME </a>
                     </li>
                     @foreach($tripcategs as $item)
                         <li>
@@ -64,7 +64,7 @@
                     @endforeach
                     <li><a href="{{route('front.contact')}}">Kantakt</a></li>
                     <li class="plan-trip">
-                        <a href="{{route('front.booking')}}" class="btn-book">Plan your trip<span class="fa fa-send"></span>
+                        <a href="{{route('front.booking')}}" class="btn-book">Reisebaukasten<span class="fa fa-send"></span>
                         </a>
                     </li>
                 </ul>

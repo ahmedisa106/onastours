@@ -135,14 +135,14 @@
                         </div>
                         <!-- /.nav-tabs-custom -->
 
-                        <input checked class="price_table" style="margin-left:200px; margin-right: 10px; " type="radio" value="0" name="pt"><label class=" " for="">price table</label>
-                        <input class="price_table" style="margin-left:50px; margin-right: 10px; " type="radio" value="1" name="pt"> <label class=" " for="">price one table</label>
+                        <input checked class="price_table" style="margin-left:165px; margin-right: 10px; " type="radio" value="0" name="price_type"><label class=" " for="">price table</label>
+                        <input class="price_table" style="margin-left:50px; margin-right: 10px; " type="radio" value="1" name="price_type"> <label class=" " for="">price one table</label>
 
                         <div class="form-group pt " id="0">
 
                             <label for="" class="control-label col-sm-2 hidden">price table</label>
 
-                            <div class="col-sm-8" style=" margin-left: 200px;">
+                            <div class="col-sm-8" style=" margin-left: 165px;">
                                 <textarea class=" ckeditor" name="table1" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $__env->make('tripmodule::Trip.price_table', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?></textarea>
                             </div>
 
@@ -151,7 +151,7 @@
 
                             <label for="" class="control-label col-sm-2 hidden">price table</label>
 
-                            <div class="col-sm-8" style=" margin-left: 200px;">
+                            <div class="col-sm-8" style=" margin-left: 165px;">
                                 <textarea class=" ckeditor" name="table2" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $__env->make('tripmodule::Trip.table2', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?></textarea>
                             </div>
 

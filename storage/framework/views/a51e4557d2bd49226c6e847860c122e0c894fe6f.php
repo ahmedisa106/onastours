@@ -48,7 +48,7 @@
                 </span>
                 <ul>
                     <li>
-                        <a href="">HOME </a>
+                        <a href="<?php echo e(url('/')); ?>">HOME </a>
                     </li>
                     <?php $__currentLoopData = $tripcategs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <li>
@@ -67,7 +67,7 @@
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     <li><a href="<?php echo e(route('front.contact')); ?>">Kantakt</a></li>
                     <li class="plan-trip">
-                        <a href="<?php echo e(route('front.booking')); ?>" class="btn-book">Plan your trip<span class="fa fa-send"></span>
+                        <a href="<?php echo e(route('front.booking')); ?>" class="btn-book">Reisebaukasten<span class="fa fa-send"></span>
                         </a>
                     </li>
                 </ul>

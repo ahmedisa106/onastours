@@ -23,7 +23,7 @@ class Trip extends Model
             'not_include'
         ];
 
-    protected $fillable = ['trip_category_id', 'photo', 'price', 'days', 'price_table', 'is_home_page'];
+    protected $fillable = ['trip_category_id', 'photo', 'price', 'days', 'price_table', 'price_type', 'is_home_page'];
 
     public $translationModel = TripTranslate::class;
 

@@ -1,7 +1,9 @@
+<?php $__env->startSection('header'); ?>
+    <meta name="title" content="<?php echo e($config['meta_title']); ?>">
+    <meta name="description" content="<?php echo e($config['meta_desc']); ?>">
+    <meta name="keywords" content="<?php echo e($config['meta_keywords']); ?>">
+<?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
-
-
-
 
 <section>
         <div class="slider-banner-2">
@@ -303,5 +305,5 @@
 </section>
 
 <?php $__env->stopSection(); ?>
-
+
 <?php echo $__env->make('frontmodule::layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

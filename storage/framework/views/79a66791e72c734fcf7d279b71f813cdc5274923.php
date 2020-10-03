@@ -108,12 +108,13 @@
             e.preventDefault();
             $tr = $(this).closest('tr');
             $icon = $tr.find('#icon');
+
+            $id = $tr.find('#trip_id').val();
+            $active = $tr.find('#active').val();
             $icon.removeClass('fa fa-check');
             $icon.removeClass('fa fa-close');
             $icon.addClass('fa fa-spinner');
-            $id = $tr.find('#trip_id').val();
-            $active = $tr.find('#active').val();
-
+            $icon.addClass('fa fa-check');
             $.ajax({
                 'type': 'POST',
                 'url': '<?php echo e(route('trip.homepage')); ?>',
@@ -123,8 +124,11 @@
                     'active': $active,
 
                 },
+
                 'statusCode': {
                     200: function (response) {
+
+
                         swal("رائع", "تم تحديث  المنتج بنحاح!", "success", {button: "Ok",});
                         $('#tripIndex').DataTable().ajax.reload();
 

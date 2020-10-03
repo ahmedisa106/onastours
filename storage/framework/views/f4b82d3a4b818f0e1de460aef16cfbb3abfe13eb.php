@@ -42,24 +42,24 @@
                         <a href="" class="destination-3__figure-item">
                             <img src="<?php echo e(url('/')); ?>/public/assets/front/assets/images/uploads/destination/icon7.png"
                                  alt="icon7">
-                            <h5>500+ Local Guides</h5>
-                            <p>Fusce venenatis nunc ac elit pellentesque laoreet vitae a orci augue eores fignei.</p>
+                            <h5>Professionelle Reiseleiter</h5>
+                            <p>Qualifizierte zufelässige kompetenten deutschsprachige Reiseleiter werden Ihnen Kultur, Geschichte, Land und Leute Ägyptens näherbringen.</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a href="" class="destination-3__figure-item">
                             <img src="<?php echo e(url('/')); ?>/public/assets/front/assets/images/uploads/destination/icon8.png"
                                  alt="icon7">
-                            <h5>Handcrafted Experience</h5>
-                            <p>Etiam et faucibus tellus, eget ultricies enim. Vivamus accumsan confence.</p>
+                            <h5>Individueller Reiseservice</h5>
+                            <p> Sie haben einen besonderen Reisewünsch? Wir stellen Ihnen nach Wunsch Ihre Traumreise zusammen.</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-12">
                         <a href="" class="destination-3__figure-item">
                             <img src="<?php echo e(url('/')); ?>/public/assets/front/assets/images/uploads/destination/icon9.png"
                                  alt="icon7">
-                            <h5>100% Happy Travelers</h5>
-                            <p> Praesent a nulla varius, consectetur tellus ut, egestas mi librro non.</p>
+                            <h5>Qualitätsgarantie</h5>
+                            <p>Qualität steht bei uns an oberster Stelle. Zufriedenheit unserer Kunden ist immer unser Ziel</p>
                         </a>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="section-tittle">
                     <h2>discover now</h2>
                     <div class="section-tittle__line-under"></div>
-                    <p>Top <span>Destination</span></p>
+                    <p> Top<span> Zielort</span></p>
                 </div>
             </div>
             <div class="row">
@@ -114,7 +114,7 @@
                 <div class="col-lg-12">
                     <div class="email_gardener text-center">
                         <div class="section_tit light-color">
-                            <h2>Plan your trip now</h2>
+                            <h2>Reisebaukasten</h2>
                             <span class="three_line"></span>
                         </div>
                         <div class="text_heading mb-30 light-color">
@@ -123,7 +123,7 @@
                                 amet, ut mauris erat mattis neque a quis. Vivamus donec dolor consectetuer congue.
                             </p>
                         </div>
-                        <a href="<?php echo e(route('front.booking')); ?>" class="btn-book">Book now <span class="fa fa-send"></span></a>
+                        <a href="<?php echo e(route('front.booking')); ?>" class="btn-book">Mehr <span class="fa fa-send"></span></a>
                     </div>
                 </div>
 
@@ -140,12 +140,11 @@
                 <!-- section tittle -->
 
                 <div class="section-tittle">
-                    <h2>Popular Tours</h2>
+                    <h2>Populär Reisen</h2>
                     <div class="section-tittle__line-under"></div>
-                    <p>Popular <span>Tours</span></p>
+                    <p>Populär <span>Reisen</span></p>
                 </div>
-                <span class="col-4-tour__sub-tittle">Praesent at ante scelerisque, auctor turpis vitae, aliquet nequ
-                    Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+
             </div>
             <div class="row">
 

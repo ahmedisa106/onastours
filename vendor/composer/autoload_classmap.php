@@ -2266,6 +2266,7 @@ return array(
     'Modules\\ConfigModule\\Providers\\RouteServiceProvider' => $baseDir . '/Modules/ConfigModule/Providers/RouteServiceProvider.php',
     'Modules\\ConfigModule\\Repository\\ConfigRepository' => $baseDir . '/Modules/ConfigModule/Repository/ConfigRepository.php',
     'Modules\\FrontModule\\Database\\Seeders\\FrontModuleDatabaseSeeder' => $baseDir . '/Modules/FrontModule/Database/Seeders/FrontModuleDatabaseSeeder.php',
+    'Modules\\FrontModule\\Emails\\sendEmail' => $baseDir . '/Modules/FrontModule/Emails/SendEmail.php',
     'Modules\\FrontModule\\Http\\Controllers\\FrontModuleController' => $baseDir . '/Modules/FrontModule/Http/Controllers/FrontModuleController.php',
     'Modules\\FrontModule\\Providers\\FrontModuleServiceProvider' => $baseDir . '/Modules/FrontModule/Providers/FrontModuleServiceProvider.php',
     'Modules\\FrontModule\\Providers\\RouteServiceProvider' => $baseDir . '/Modules/FrontModule/Providers/RouteServiceProvider.php',

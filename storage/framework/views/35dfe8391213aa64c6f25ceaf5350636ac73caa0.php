@@ -67,8 +67,6 @@
                                         </div>
 
 
-                                        <p> <?php echo $item->description; ?></p>
-
                                     </div>
                                 </div>
                             </a>

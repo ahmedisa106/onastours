@@ -74,7 +74,7 @@ class TripController extends Controller
 
 
         $tripData = $request->except('_token', 'photo', 'photos', 'destinations', 'trip_category_id');
-        if ($request->pt == 0) {
+        if ($request->price_type == 0) {
             $tripData['price_table'] = $request->table1;
         } else {
             $tripData['price_table'] = $request->table2;
@@ -144,7 +144,7 @@ class TripController extends Controller
 
         $tripPic = $this->tripRepo->find($id);
         $tripData = $request->except('_token', '_method', 'photo', 'photos', 'de', 'en', 'destinations', 'categories', 'home_page');
-        if ($request->pt == 0) {
+        if ($request->price_type == 0) {
             $tripData['price_table'] = $request->table1;
         } else {
             $tripData['price_table'] = $request->table2;
@@ -315,6 +315,8 @@ class TripController extends Controller
         if ($request->ajax()) {
 
             $this->tripRepo->UpdateHomeTrips($request->id, $request->active);
+
+
             return response()->json('updated', '200');
         }
 

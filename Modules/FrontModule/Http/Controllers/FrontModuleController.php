@@ -6,17 +6,17 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Mail;
 use Modules\BookingModule\Entities\Booking;
+use Modules\ConfigModule\Repository\ConfigRepository;
+use Modules\FrontModule\Emails\SendContactEmail;
 use Modules\FrontModule\Emails\sendEmail;
 use Modules\TripModule\Entities\Trip;
+use Modules\TripModule\Repository\DestinationRepository;
+use Modules\TripModule\Repository\TripCategoryRepository;
+use Modules\TripModule\Repository\TripRepository;
 use Modules\WidgetsModule\Entities\Page;
 use Modules\WidgetsModule\Repository\SliderRepository;
-use Modules\TripModule\Repository\DestinationRepository;
-use Modules\TripModule\Repository\TripRepository;
-use Modules\TripModule\Repository\TripCategoryRepository;
-use Modules\ConfigModule\Repository\ConfigRepository;
-use Modules\WidgetsModule\Repository\TestimonialRepository;
 use Modules\WidgetsModule\Repository\TeamRepository;
-use Illuminate\Support\Facades\View;
+use Modules\WidgetsModule\Repository\TestimonialRepository;
 
 
 class FrontModuleController extends Controller
@@ -110,6 +110,15 @@ class FrontModuleController extends Controller
 
     }
 
+    public function sendContactEmail(Request $request)
+    {
+        $data = $request->except(['_token']);
+
+        Mail::to('info@onastours.com')->send(new SendContactEmail($data));
+        return redirect()->back()->with('success', 'data sent');
+
+    }
+
 
     public function booking()
     {
@@ -129,10 +138,7 @@ class FrontModuleController extends Controller
     {
 
 
-
         if ($request->captcha === $request->valid_captcha) {
-
-
 
 
             $dep_date = str_replace(' / ', '/', $request->departure_date);
@@ -155,8 +161,8 @@ class FrontModuleController extends Controller
                 'adults_number' => $data['adult_number'],
                 'kids_number' => $data['kids_number'],
                 'abbreviation' => $data['abbr'],
-                'mobile'=>$data['mobile'],
-                'notes'=>$data['note'],
+                'mobile' => $data['mobile'],
+                'notes' => $data['note'],
 
 
             ];

@@ -68,8 +68,6 @@
                                         </div>
 
 
-                                        <p> {!! $item->description !!}</p>
-
                                     </div>
                                 </div>
                             </a>
